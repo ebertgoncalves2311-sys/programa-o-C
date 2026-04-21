@@ -1,38 +1,43 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-int main(){
-    
-    int numero1, numero2;
-    int soma, subtracao, multiplicacao, divisao;
+#define MAX_LIVROS 50
+#define TAM_STRING 100
 
-    printf("Entre com o número 1:  \n");
-    scanf("%d", &numero1);
-    printf("Entre com o número 2:  \n ");
-    scanf("%d", &numero2);
+struch Livro { 
+    char nome [TAM_STRING];
+    char autor[TAM_STRING];
+    char editora[TAM_STRING];
+    int edicao;
+};
 
+void limparBufferEntrada() {
+  int c;
+  while ((c = getchar()) != '\n' && c != EOF);
+}
 
+int main() {
 
-    //operação soma 
-    soma = numero1 + numero2; 
+struct Livro biblioteca[MAX_LIVROS];
+int totalLivros = 0;
+int opcao;
 
-    //operação subtraçãi
-    subtracao = numero1 - numero2;
+do {
 
-    //operação multiplicação 
-    multiplicacao = numero1 * numero2; 
-
-    //operação divisão 
-    divisao = numero1 / numero2;
-
-  printf("A Soma é: %d\n",  soma);
-  printf("A Subtracao é: %d\n",  subtracao);
-  printf("A Multiplicacao é: %d\n",  multiplicacao);
-  printf("A Divisao é: %d\n",  divisao);
-
+printf("==========================================/n")
+printf("BIBLIOTECA - PARTE 1")
 
 
 
 
 
 
+
+
+
+
+
+
+}
 }
